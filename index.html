@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Beginnings · One Blessed Celebration | Family Invitation</title>
+    <meta name="description"
+        content="Join us as we celebrate the Nikah of Jamshida & Midlaj and the housewarming and wedding reception of Muhammed Jalib & Fathima on 19 & 20 December 2026.">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamshida-midlaj.netlify.app/">
+    <meta property="og:title" content="Two Beginnings · One Blessed Celebration">
+    <meta property="og:description"
+        content="With the blessings of Allah (SWT), we cordially invite you and your family to celebrate the Housewarming of Muhammed Jalib & Fathima and the Nikkah & Marriage Reception of Jamshida & Midlaj on 19 & 20 December 2026.">
+    <meta property="og:image" content="https://jamshida-midlaj.netlify.app/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://jamshida-midlaj.netlify.app/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="Two Beginnings · One Blessed Celebration Invitation">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jamshida-midlaj.netlify.app/">
+    <meta property="twitter:title" content="Two Beginnings · One Blessed Celebration">
+    <meta property="twitter:description"
+        content="With the blessings of Allah (SWT), we cordially invite you and your family to celebrate the Housewarming of Muhammed Jalib & Fathima and the Nikkah & Marriage Reception of Jamshida & Midlaj on 19 & 20 December 2026.">
+    <meta property="twitter:image" content="https://jamshida-midlaj.netlify.app/og-image.jpg">
+
+    <link rel="canonical" href="https://jamshida-midlaj.netlify.app/">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========================================== -->
+    <!-- 1. LUXURY SCRATCH / REVEAL OPENING OVERLAY -->
+    <!-- ========================================== -->
+    <div id="scratchScreen" role="dialog" aria-modal="true" aria-label="Interactive Invitation Card">
+        <div class="scratch-card-wrapper">
+            <div class="scratch-card">
+                <!-- Revealed content underneath gold layer -->
+                <div class="scratch-content" id="scratchRevealedContent">
+                    <div class="scratch-bismillah">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+                    <div class="scratch-arch-badge">
+                        <svg class="scratch-arch-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L4 9v11h16V9l-8-7zm0 2.24l6 5.25V18h-3v-6H9v6H6v-6.51l6-5.25z"/>
+                        </svg>
+                        <span class="scratch-symbol-sep">✦</span>
+                        <svg class="scratch-arch-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3 class="scratch-title">Two Beginnings</h3>
+                    <div class="scratch-subtitle">One Blessed Celebration</div>
+                    <p class="scratch-couples">
+                        Muhammed Jalib & Fathima · Jamshida & Midlaj
+                    </p>
+                    <div class="scratch-date-badge">19 & 20 December 2026</div>
+                    <div class="scratch-arabic-date" lang="ar" dir="rtl">١١ رجب ١٤٤٨ هـ</div>
+                </div>
+
+                <!-- Gold Foil Canvas Overlay -->
+                <canvas id="scratchCanvas" aria-label="Scratch card to reveal the invitation"></canvas>
+            </div>
+
+            <!-- Accessibility Skip Button & Instructions -->
+            <div class="scratch-actions">
+                <p class="scratch-hint">
+                    <span class="sparkle-icon">✨</span> Scratch the golden card to open <span class="sparkle-icon">✨</span>
+                </p>
+                <button type="button" id="skipScratchBtn" class="btn-skip" aria-label="Open invitation directly">
+                    <span>Open Invitation Directly</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FLOATING AUDIO CONTROLLER                  -->
+    <!-- ========================================== -->
+    <div class="audio-controller" id="audio-toggle" role="button" tabindex="0" aria-label="Toggle background music" title="Play / Pause Background Nasheed">
+        <div class="audio-pulse-ring"></div>
+        <svg id="audio-icon" viewBox="0 0 24 24" width="20" height="20">
+            <!-- Default muted icon -->
+            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM12 4L9.91 6.09 12 8.18V4zm-8.09-.09L2.81 5.09 6.82 9H4v6h4l5 5v-6.83l4.88 4.88c-.62.47-1.31.85-2.08 1.09v2.01c1.3-.3 2.49-.93 3.47-1.76l2.62 2.62 1.41-1.41L4.82 2.81 3.91 3.91zM12 15.17L9.83 13H8v-2h1.83l.26-.26 1.91 1.91v2.52z" />
+        </svg>
+        <span class="audio-tooltip">Music</span>
+        <audio id="bg-audio" loop preload="auto">
+            <source src="music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FLOATING QUICK NAVIGATION DOCK            -->
+    <!-- ========================================== -->
+    <nav class="floating-nav" id="floatingNav" aria-label="Quick section navigation">
+        <div class="nav-pill">
+            <a href="#hero" class="nav-item active" title="Top" aria-label="Go to top">
+                <svg viewBox="0 0 24 24"><path d="M12 3L4 9v12h16V9l-8-6zm0 2.25l6 4.5V19.5H6V9.75l6-4.5z"/></svg>
+                <span class="nav-text">Home</span>
+            </a>
+            <a href="#invitation" class="nav-item" title="Invitation" aria-label="View Invitation">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span class="nav-text">Invite</span>
+            </a>
+            <a href="#timeline" class="nav-item" title="Timeline" aria-label="Celebration Timeline">
+                <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+                <span class="nav-text">Timeline</span>
+            </a>
+            <a href="#celebrations" class="nav-item" title="Celebrations" aria-label="View Celebrations">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                <span class="nav-text">Couples</span>
+            </a>
+            <a href="#venue" class="nav-item" title="Venues" aria-label="Venue Locations">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span class="nav-text">Venues</span>
+            </a>
+            <a href="#rsvp" class="nav-item nav-item-highlight" title="RSVP" aria-label="Confirm Attendance">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span class="nav-text">RSVP</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Decorative Top Lantern Overlays -->
+    <div class="lantern-wrapper left" aria-hidden="true">
+        <svg viewBox="0 0 100 220" width="55" height="120" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="0" x2="50" y2="40" stroke="#b38b47" stroke-width="1.5" />
+            <path d="M50 40 L28 65 L32 120 L50 142 L68 120 L72 65 Z" fill="#fffdfa" stroke="#b38b47" stroke-width="1.8" />
+            <polygon points="50,48 36,66 64,66" fill="#cda869" opacity="0.85" />
+            <rect x="44" y="70" width="12" height="42" fill="#d8b668" rx="2" opacity="0.9" />
+            <circle cx="50" cy="90" r="14" fill="#fbbf24" filter="blur(3px)" opacity="0.6" />
+            <path d="M30 92 L70 92" stroke="#b38b47" stroke-width="1.2" />
+            <line x1="50" y1="142" x2="50" y2="175" stroke="#b38b47" stroke-width="1.5" />
+            <circle cx="50" cy="180" r="4.5" fill="#b38b47" />
+        </svg>
+    </div>
+    <div class="lantern-wrapper right" aria-hidden="true">
+        <svg viewBox="0 0 100 220" width="55" height="120" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="0" x2="50" y2="60" stroke="#b38b47" stroke-width="1.5" />
+            <path d="M50 60 L32 80 L35 130 L50 150 L65 130 L68 80 Z" fill="#fffdfa" stroke="#b38b47" stroke-width="1.8" />
+            <polygon points="50,68 39,83 61,83" fill="#cda869" opacity="0.85" />
+            <rect x="45" y="87" width="10" height="38" fill="#d8b668" rx="2" opacity="0.9" />
+            <circle cx="50" cy="105" r="12" fill="#fbbf24" filter="blur(3px)" opacity="0.6" />
+            <path d="M34 105 L66 105" stroke="#b38b47" stroke-width="1.2" />
+            <line x1="50" y1="150" x2="50" y2="182" stroke="#b38b47" stroke-width="1.5" />
+            <circle cx="50" cy="187" r="4" fill="#b38b47" />
+        </svg>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. HERO & TWO CELEBRATIONS INTRODUCTION    -->
+    <!-- ========================================== -->
+    <header class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-house-texture"></div>
+
+        <div class="container hero-content">
+            <!-- Bismillah Header -->
+            <div class="bismillah-block">
+                <div class="arabic-bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+                <p class="bismillah-sub">With the blessings of Allah (SWT)</p>
+            </div>
+
+            <!-- Elegant Islamic Divider Motif -->
+            <div class="ornament-divider">
+                <span class="ornament-line"></span>
+                <span class="ornament-crest">
+                    <svg viewBox="0 0 32 32" width="24" height="24" fill="currentColor">
+                        <path d="M16 2L19.5 9.5L27 10.5L21.5 16L23 23.5L16 19.5L9 23.5L10.5 16L5 10.5L12.5 9.5L16 2Z"/>
+                    </svg>
+                </span>
+                <span class="ornament-line"></span>
+            </div>
+
+            <!-- Main Hero Headings -->
+            <div class="hero-headings">
+                <span class="hero-tagline">Family Invitation</span>
+                <h1 class="hero-main-title">Two Beginnings</h1>
+                <h2 class="hero-sub-title">One Blessed Celebration</h2>
+            </div>
+
+            <p class="hero-description">
+                With the blessings of Allah (SWT), we invite you and your family to share in the joy of two beautiful occasions in our family.
+            </p>
+
+            <div class="hero-date-badge">
+                <span class="calendar-icon">📅</span>
+                <span class="date-text">19 & 20 December 2026</span>
+                <span class="date-loc">· Vadakara, Kerala</span>
+            </div>
+            <div class="hero-arabic-date" lang="ar" dir="rtl">١١ رجب ١٤٤٨ هـ</div>
+
+            <!-- DUAL BALANCED CELEBRATION HERO CARDS -->
+            <div class="hero-dual-grid">
+                <!-- Card A: Housewarming -->
+                <div class="hero-card hero-card-house">
+                    <div class="hero-card-inner">
+                        <div class="hero-card-icon">
+                            <span class="icon-symbol">🏡</span>
+                        </div>
+                        <span class="hero-card-tag">A New Home</span>
+                        <h3 class="hero-card-names">Muhammed Jalib V<br><span class="ampersand">&</span><br>Fathima MC</h3>
+                        <span class="house-badge-pill">Baithul Madina</span>
+                        <p class="hero-card-event">Housewarming Ceremony</p>
+                        <div class="hero-card-date">
+                            <span class="badge-day">Sunday, 20 Dec 2026</span>
+                            <span class="badge-time">11:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unified Center Crest -->
+                <div class="hero-dual-center">
+                    <div class="center-line"></div>
+                    <div class="center-seal">
+                        <span>✦</span>
+                    </div>
+                    <div class="center-line"></div>
+                </div>
+
+                <!-- Card B: Wedding Reception -->
+                <div class="hero-card hero-card-wedding">
+                    <div class="hero-card-inner">
+                        <div class="hero-card-icon">
+                            <span class="icon-symbol">✨</span>
+                        </div>
+                        <span class="hero-card-tag">A New Journey</span>
+                        <h3 class="hero-card-names">Jamshida<br><span class="ampersand">&</span><br>Midlaj</h3>
+                        <span class="time-asr-pill time-maghrib-pill">Nikah: Saturday After Asr</span>
+                        <p class="hero-card-event">Nikkah & Wedding Reception</p>
+                        <div class="hero-card-date">
+                            <span class="badge-day">19 & 20 Dec 2026</span>
+                            <span class="badge-time">Saturday & Sunday</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Links -->
+            <div class="hero-actions">
+                <a href="#invitation" class="btn btn-primary">
+                    <span>Read Invitation</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 16l-6-6h12z"/></svg>
+                </a>
+                <a href="#venue" class="btn btn-secondary">
+                    <span>View Venues & Map</span>
+                </a>
+            </div>
+
+            <!-- LIVE COUNTDOWN TIMER -->
+            <div class="countdown-container" id="countdownSection">
+                <div class="countdown-header">
+                    <div class="countdown-pulse-dot"></div>
+                    <span class="countdown-eyebrow">Countdown to Celebration</span>
+                    <h3 class="countdown-title">Until We Celebrate Together</h3>
+                    <p class="countdown-target-time">Sunday, 20 December 2026 · 11:00 AM IST</p>
+                </div>
+
+                <div class="countdown-grid" id="countdown">
+                    <div class="countdown-card">
+                        <div class="countdown-num-wrap">
+                            <span class="countdown-number" id="days">00</span>
+                        </div>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-num-wrap">
+                            <span class="countdown-number" id="hours">00</span>
+                        </div>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-num-wrap">
+                            <span class="countdown-number" id="minutes">00</span>
+                        </div>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-card">
+                        <div class="countdown-num-wrap">
+                            <span class="countdown-number" id="seconds">00</span>
+                        </div>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+
+                <!-- Add to Calendar Action Button -->
+                <div class="calendar-actions">
+                    <button type="button" id="addToCalBtn" class="btn-cal" aria-haspopup="true">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                        <span>Save Date to Calendar</span>
+                    </button>
+                    <div class="cal-dropdown" id="calDropdown" hidden>
+                        <a href="#" id="calGoogle" target="_blank" rel="noopener noreferrer">Google Calendar</a>
+                        <a href="#" id="calIcs" download="celebration-2026.ics">Apple / Outlook (.ics)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- 3. MAIN INVITATION MESSAGE SECTION         -->
+    <!-- ========================================== -->
+    <section class="section invitation-section reveal" id="invitation">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Heartfelt Welcome</span>
+                <h2 class="section-title">With Love, We Invite You</h2>
+                <div class="title-ornament">✦ · ✦ · ✦</div>
+            </div>
+
+            <div class="invitation-letter-card">
+                <div class="card-arch-border"></div>
+                <div class="invitation-letter-content">
+                    <div class="letter-salutation">Dear ones,</div>
+
+                    <div class="letter-body">
+                        <p class="letter-paragraph">
+                            <span class="dropcap">I</span>nsha Allah, the housewarming of the new home <strong class="highlight-name">"Baithul Madina"</strong> built by our son <strong class="highlight-name">Muhammed Jalib</strong> at Mangaattupaara, and the marriage reception of our daughter <strong class="highlight-name">Jamshida</strong> have been scheduled for <strong class="highlight-date">Sunday, December 20, at 11:00 AM <span class="arabic-date-inline" lang="ar" dir="rtl">· ١١ رجب ١٤٤٨ هـ</span></strong>.
+                        </p>
+                        <p class="letter-paragraph">
+                            The holy Nikah of Jamshida & Midlaj will be solemnized on <strong class="highlight-date">Saturday, December 19, after Asr <span class="arabic-date-inline" lang="ar" dir="rtl">· ١٠ رجب ١٤٤٨ هـ</span></strong> at Saraam Palli (Vadakara Srambi Mosque).
+                        </p>
+                        <p class="letter-paragraph">
+                            We cordially invite you and your family to grace the Nikah ceremony, housewarming function, and wedding feast with your presence and prayers.
+                        </p>
+                    </div>
+
+                    <div class="letter-dua-line">
+                        <span class="dua-quote-symbol">❝</span>
+                        <span>Your presence and duas will make our celebration complete.</span>
+                        <span class="dua-quote-symbol">❞</span>
+                    </div>
+
+                    <!-- Signature seal from family -->
+                    <div class="letter-family-seal">
+                        <div class="seal-line"></div>
+                        <div class="seal-text">
+                            <span>With Prayers & Best Compliments</span>
+                            <strong>The Family</strong>
+                        </div>
+                        <div class="seal-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. TWO-DAY CELEBRATION TIMELINE            -->
+    <!-- ========================================== -->
+    <section class="section timeline-section reveal" id="timeline">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Program Schedule</span>
+                <h2 class="section-title">The Celebration Begins</h2>
+                <p class="section-desc">Two meaningful milestones over two blessed days</p>
+                <div class="title-ornament">✦ · ✦ · ✦</div>
+            </div>
+
+            <div class="timeline-container">
+                <!-- DAY 1: NIKKAH -->
+                <div class="timeline-block day-1">
+                    <div class="timeline-date-marker">
+                        <span class="timeline-day-tag">Day 1</span>
+                        <span class="timeline-date-num">19</span>
+                        <span class="timeline-month">Dec 2026</span>
+                        <span class="timeline-day-name">Saturday</span>
+                    </div>
+
+                    <div class="timeline-content-card">
+                        <div class="card-arch-top"></div>
+                        <div class="timeline-badge-pill">Marriage Ceremony</div>
+                        <h3 class="timeline-event-name">The Holy Nikkah</h3>
+                        
+                        <div class="timeline-time-badge">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            <span>After Asr</span>
+                        </div>
+
+                        <div class="timeline-couple-names">
+                            <span class="p-name">Jamshida</span>
+                            <span class="p-amp">&</span>
+                            <span class="p-name">Midlaj</span>
+                        </div>
+
+                        <div class="timeline-venue-box">
+                            <div class="venue-icon-col">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                            </div>
+                            <div class="venue-info-col">
+                                <div class="venue-name">Saraam Palli (Vadakara Srambi Mosque)</div>
+                                <div class="venue-malayalam" lang="ml">വടകര സ്രാംപള്ളിയിൽ</div>
+                                <div class="venue-sub">Solemnization of Marriage · After Asr</div>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/BkHGc2HMfjUfrfEw6?g_st=iw" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Saraam Palli Location</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONNECTING CONNECTOR -->
+                <div class="timeline-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-badge">
+                        <span>and the celebration continues...</span>
+                    </div>
+                    <div class="connector-line"></div>
+                </div>
+
+                <!-- DAY 2: HOUSEWARMING & WEDDING RECEPTION -->
+                <div class="timeline-block day-2">
+                    <div class="timeline-date-marker">
+                        <span class="timeline-day-tag">Day 2</span>
+                        <span class="timeline-date-num">20</span>
+                        <span class="timeline-month">Dec 2026</span>
+                        <span class="timeline-day-name">Sunday</span>
+                    </div>
+
+                    <div class="timeline-content-card highlight-card">
+                        <div class="card-arch-top"></div>
+                        <div class="timeline-badge-pill pill-gold">Combined Celebration</div>
+                        <h3 class="timeline-event-name">Housewarming & Wedding Feast</h3>
+                        
+                        <div class="timeline-time-badge">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            <span>11:00 AM Onwards</span>
+                        </div>
+
+                        <div class="timeline-dual-celebration-grid">
+                            <div class="mini-celebration-col">
+                                <span class="mini-icon">🏡</span>
+                                <strong>Housewarming Ceremony</strong>
+                                <p>Muhammed Jalib & Fathima</p>
+                            </div>
+                            <div class="mini-celebration-sep">✦</div>
+                            <div class="mini-celebration-col">
+                                <span class="mini-icon">✨</span>
+                                <strong>Wedding Reception</strong>
+                                <p>Jamshida & Midlaj</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-venue-box">
+                            <div class="venue-icon-col">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                                </svg>
+                            </div>
+                            <div class="venue-info-col">
+                                <div class="venue-name">Muhammed Jalib's New Home — Baithul Madina</div>
+                                <div class="venue-address">Mangaattupaara</div>
+                                <div class="venue-sub">Housewarming function & Wedding feast</div>
+                            </div>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/w9KewmuugsnGbFMSA" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/></svg>
+                            <span>Baithul Madina Map Location</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. WEDDING COUPLE & HOUSEWARMING SPOTLIGHT -->
+    <!-- ========================================== -->
+    <section class="section celebrations-section reveal" id="celebrations">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Honored Couples</span>
+                <h2 class="section-title">Two Blessed Milestones</h2>
+                <p class="section-desc">Honoring both celebrations with equal love and barakah</p>
+                <div class="title-ornament">✦ · ✦ · ✦</div>
+            </div>
+
+            <div class="spotlight-grid">
+                <!-- WEDDING SECTION -->
+                <div class="spotlight-card wedding-card">
+                    <div class="spotlight-arch-frame">
+                        <div class="spotlight-header">
+                            <div class="spotlight-icon-circle">
+                                <span>💍</span>
+                            </div>
+                            <span class="spotlight-eyebrow">A New Journey Begins</span>
+                            <h3 class="spotlight-main-heading">Nikkah & Reception</h3>
+                        </div>
+
+                        <div class="couple-profile-block">
+                            <!-- Bride -->
+                            <div class="person-card">
+                                <span class="person-role">Bride</span>
+                                <h4 class="person-name">Jamshida</h4>
+                                <p class="person-parentage">Daughter of Jabbar NV & Bathuly V</p>
+                            </div>
+
+                            <div class="spotlight-union-symbol">
+                                <div class="union-line"></div>
+                                <div class="union-monogram">J & M</div>
+                                <div class="union-line"></div>
+                            </div>
+
+                            <!-- Groom -->
+                            <div class="person-card">
+                                <span class="person-role">Groom</span>
+                                <h4 class="person-name">Midlaj</h4>
+                                <p class="person-parentage">Son of Late Ashraf NP</p>
+                            </div>
+                        </div>
+
+                        <!-- Wedding Dua -->
+                        <div class="spotlight-dua-box">
+                            <div class="arabic-dua" lang="ar">بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ</div>
+                            <p class="english-dua">
+                                "May Allah bless you both and unite you in goodness and everlasting harmony."
+                            </p>
+                        </div>
+
+                        <div class="spotlight-event-pills">
+                            <span class="event-pill">19 Dec · After Asr · Saraam Palli</span>
+                            <span class="event-pill">20 Dec · 11:00 AM · Baithul Madina</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOUSEWARMING SECTION -->
+                <div class="spotlight-card house-card">
+                    <div class="spotlight-arch-frame">
+                        <div class="spotlight-header">
+                            <div class="spotlight-icon-circle">
+                                <span>🏡</span>
+                            </div>
+                            <span class="spotlight-eyebrow">A New Home, A New Chapter</span>
+                            <h3 class="spotlight-main-heading">Housewarming Ceremony</h3>
+                            <span class="house-badge-pill" style="margin-top: 8px;">Baithul Madina</span>
+                        </div>
+
+                        <div class="couple-profile-block">
+                            <!-- Son & Daughter-in-law -->
+                            <div class="person-card">
+                                <span class="person-role">New Home Owners</span>
+                                <h4 class="person-name">Muhammed Jalib V</h4>
+                                <p class="person-parentage">Son of Jabbar NV & Bathuly V</p>
+                            </div>
+
+                            <div class="spotlight-union-symbol">
+                                <div class="union-line"></div>
+                                <div class="union-monogram">J & F</div>
+                                <div class="union-line"></div>
+                            </div>
+
+                            <div class="person-card">
+                                <span class="person-role">Wife</span>
+                                <h4 class="person-name">Fathima MC</h4>
+                                <p class="person-parentage">Daughter of Subaida MC & Late Moosa</p>
+                            </div>
+                        </div>
+
+                        <!-- Housewarming Dua -->
+                        <div class="spotlight-dua-box">
+                            <div class="arabic-dua" lang="ar">اللَّهُمَّ بَارِكْ فِي هَذَا الْبَيْتِ وَاجْعَلْهُ مَأْوًى لِلسَّكِينَةِ</div>
+                            <p class="english-dua">
+                                "May Allah bless this new home with peace, warmth, prosperity and boundless barakah."
+                            </p>
+                        </div>
+
+                        <div class="spotlight-event-pills">
+                            <span class="event-pill">20 Dec · 11:00 AM</span>
+                            <span class="event-pill">Mangaattupaara</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. COMBINED CELEBRATION HARMONY            -->
+    <!-- ========================================== -->
+    <section class="section harmony-section reveal">
+        <div class="container">
+            <div class="harmony-card">
+                <span class="harmony-badge">Unified Joy</span>
+                <h2 class="harmony-title">Two Joyous Occasions</h2>
+                <p class="harmony-quote">
+                    "A new home to begin a new chapter, and a new journey to begin a new life."
+                </p>
+
+                <div class="harmony-flow">
+                    <div class="flow-step">
+                        <div class="step-circle">🏡</div>
+                        <span class="step-label">Home</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <div class="step-circle">👨‍👩‍👧‍👦</div>
+                        <span class="step-label">Family</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <div class="step-circle">💍</div>
+                        <span class="step-label">Marriage</span>
+                    </div>
+                    <div class="flow-arrow">➔</div>
+                    <div class="flow-step">
+                        <div class="step-circle">✨</div>
+                        <span class="step-label">Celebration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. QURANIC BLESSING & DUA SECTION          -->
+    <!-- ========================================== -->
+    <section class="section quran-section reveal">
+        <div class="container">
+            <div class="quran-card">
+                <div class="quran-crest">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                        <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                    </svg>
+                </div>
+
+                <div class="quran-arabic" lang="ar" dir="rtl">
+                    وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًۭا لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةًۭ وَرَحْمَةً ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَٰتٍۢ لِّقَوْمٍۢ يَتَفَكَّرُونَ
+                </div>
+
+                <p class="quran-english">
+                    "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy."
+                </p>
+                <div class="quran-ref">— Surah Ar-Rum (30:21)</div>
+
+                <div class="verse-separator">✦</div>
+
+                <div class="quran-arabic small-arabic" lang="ar" dir="rtl">
+                    وَٱللَّهُ جَعَلَ لَكُم مِّن بُيُوتِكُمْ سَكَنًۭا
+                </div>
+                <p class="quran-english">
+                    "And Allah has made for you from your homes a place of rest."
+                </p>
+                <div class="quran-ref">— Surah An-Nahl (16:80)</div>
+
+                <div class="closing-prayer">
+                    "May Allah fill their home and their lives with Sakinah, Mawaddah and Rahmah."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. VENUE & DIRECTIONS SECTION              -->
+    <!-- ========================================== -->
+    <section class="section venue-section reveal" id="venue">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Locations & Map</span>
+                <h2 class="section-title">Venues & Directions</h2>
+                <p class="section-desc">Guiding your journey to our celebrations</p>
+                <div class="title-ornament">✦ · ✦ · ✦</div>
+            </div>
+
+            <!-- Venue Switcher Tabs -->
+            <div class="venue-tabs" role="tablist">
+                <button type="button" class="venue-tab-btn active" role="tab" id="tabHome" aria-selected="true" aria-controls="panelHome">
+                    <span class="tab-icon">🏡</span>
+                    <span class="tab-title">Baithul Madina (Housewarming & Reception)</span>
+                    <span class="tab-date">20 Dec · 11:00 AM</span>
+                </button>
+                <button type="button" class="venue-tab-btn" role="tab" id="tabMosque" aria-selected="false" aria-controls="panelMosque">
+                    <span class="tab-icon">🕌</span>
+                    <span class="tab-title">Saraam Palli (Nikah Ceremony)</span>
+                    <span class="tab-date">19 Dec · After Asr</span>
+                </button>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="venue-panels">
+                <!-- Panel 1: New Home -->
+                <div class="venue-panel active" id="panelHome" role="tabpanel" aria-labelledby="tabHome">
+                    <div class="venue-grid">
+                        <div class="venue-detail-card">
+                            <div class="venue-type-badge">Housewarming & Wedding Feast</div>
+                            <h3 class="venue-main-title">Baithul Madina (Muhammed Jalib's Home)</h3>
+                            
+                            <div class="venue-meta-list">
+                                <div class="venue-meta-item">
+                                    <div class="meta-icon">📅</div>
+                                    <div class="meta-text">
+                                        <strong>Sunday, 20 December 2026</strong>
+                                        <span>11:00 AM Onwards</span>
+                                    </div>
+                                </div>
+                                <div class="venue-meta-item">
+                                    <div class="meta-icon">📍</div>
+                                    <div class="meta-text">
+                                        <strong>Mangaattupaara</strong>
+                                        <span>Vadakara, Kozhikode, Kerala</span>
+                                    </div>
+                                </div>
+                                <div class="venue-meta-item">
+                                    <div class="meta-icon">🍽️</div>
+                                    <div class="meta-text">
+                                        <strong>Wedding Feast & Refreshments</strong>
+                                        <span>Served following the ceremony</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="venue-action-buttons">
+                                <a href="https://maps.app.goo.gl/w9KewmuugsnGbFMSA" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                    <span>Open in Google Maps</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Map for New Home -->
+                        <div class="venue-map-embed">
+                            <iframe
+                                title="Map of Housewarming Venue"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3904.6062140410497!2d75.5937759!3d11.623979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba683ffadeeff8f%3A0x30d4471952caa69e!2sNanma%20Mangottupara!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Mosque -->
+                <div class="venue-panel" id="panelMosque" role="tabpanel" aria-labelledby="tabMosque" hidden>
+                    <div class="venue-grid">
+                        <div class="venue-detail-card">
+                            <div class="venue-type-badge">Solemn Marriage Ceremony</div>
+                            <h3 class="venue-main-title">Saraam Palli (Vadakara Srambi Mosque)</h3>
+                            <div class="venue-malayalam-badge" lang="ml">വടകര സ്രാംപള്ളിയിൽ</div>
+                            
+                            <div class="venue-meta-list">
+                                <div class="venue-meta-item">
+                                    <div class="meta-icon">📅</div>
+                                    <div class="meta-text">
+                                        <strong>Saturday, 19 December 2026</strong>
+                                        <span>Nikah Ceremony · After Asr</span>
+                                    </div>
+                                </div>
+                                <div class="venue-meta-item">
+                                    <div class="meta-icon">📍</div>
+                                    <div class="meta-text">
+                                        <strong>Saraam Palli / Srambi Mosque</strong>
+                                        <span>Vadakara, Kozhikode District, Kerala</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="venue-action-buttons">
+                                <a href="https://maps.app.goo.gl/BkHGc2HMfjUfrfEw6?g_st=iw" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                    <span>Get Directions to Saraam Palli</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Directions Card for Mosque -->
+                        <div class="venue-map-embed mosque-embed-placeholder">
+                            <div class="mosque-card-visual">
+                                <div class="mosque-card-icon">🕌</div>
+                                <h4>Saraam Palli (Vadakara Srambi Mosque)</h4>
+                                <p class="mosque-malayalam-txt" lang="ml">വടകര സ്രാംപള്ളിയിൽ</p>
+                                <p>Nikah Ceremony on Saturday, 19 Dec (After Asr)</p>
+                                <a href="https://maps.app.goo.gl/BkHGc2HMfjUfrfEw6?g_st=iw" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="margin-top: 12px;">
+                                    <span>Open Google Maps Directions</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. RSVP SECTION                            -->
+    <!-- ========================================== -->
+    <section class="section rsvp-section reveal" id="rsvp">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Join Our Joy</span>
+                <h2 class="section-title">We'd Love to Have You With Us</h2>
+                <p class="section-desc">Kindly confirm your presence for our celebrations</p>
+                <div class="title-ornament">✦ · ✦ · ✦</div>
+            </div>
+
+            <div class="rsvp-card-wrapper">
+                <div class="rsvp-card">
+                    <form id="rsvp-form" novalidate>
+                        <!-- Attendance Radio -->
+                        <div class="form-group">
+                            <label class="form-label">Will you be attending the celebrations? <span class="required-star">*</span></label>
+                            <div class="radio-pill-group">
+                                <label class="radio-pill">
+                                    <input type="radio" name="attendance" id="attend-yes" value="Yes, Insha Allah" checked required>
+                                    <span class="pill-btn">
+                                        <span class="pill-check">✓</span>
+                                        <span>Yes, Insha Allah</span>
+                                    </span>
+                                </label>
+                                <label class="radio-pill">
+                                    <input type="radio" name="attendance" id="attend-no" value="Sorry, I can't attend">
+                                    <span class="pill-btn">
+                                        <span class="pill-cross">✕</span>
+                                        <span>Sorry, I can't attend</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="rsvp-name" class="form-label">Your Full Name <span class="required-star">*</span></label>
+                            <input type="text" id="rsvp-name" class="form-input" placeholder="e.g. Abdullah & Family" required autocomplete="name">
+                            <span class="field-error" id="nameError">Please enter your name</span>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="form-group">
+                            <label for="rsvp-mobile" class="form-label">Mobile Number / WhatsApp <span class="required-star">*</span></label>
+                            <input type="tel" id="rsvp-mobile" class="form-input" placeholder="e.g. +91 98765 43210" required autocomplete="tel">
+                            <span class="field-error" id="mobileError">Please enter a valid mobile number</span>
+                        </div>
+
+                        <!-- Number of Guests -->
+                        <div class="form-group" id="guests-group">
+                            <label for="rsvp-guests" class="form-label">Number of Guests Attending <span class="required-star">*</span></label>
+                            <div class="guest-counter">
+                                <button type="button" class="btn-counter" id="guestMinus" aria-label="Decrease guest count">−</button>
+                                <input type="number" id="rsvp-guests" class="form-input text-center" min="1" max="25" value="1" required>
+                                <button type="button" class="btn-counter" id="guestPlus" aria-label="Increase guest count">+</button>
+                            </div>
+                            <span class="field-error" id="guestsError">Please enter at least 1 guest</span>
+                        </div>
+
+                        <!-- Event Selection -->
+                        <div class="form-group" id="events-group">
+                            <label class="form-label">Which celebration(s) will you attend?</label>
+                            <div class="event-select-group" style="display: grid; gap: 8px;">
+                                <label class="radio-pill">
+                                    <input type="radio" name="events" value="Both Celebrations (19 & 20 Dec)" checked>
+                                    <span class="pill-btn" style="text-align: left; justify-content: flex-start;">
+                                        <span>✦ Both Celebrations (19 & 20 Dec)</span>
+                                    </span>
+                                </label>
+                                <label class="radio-pill">
+                                    <input type="radio" name="events" value="Housewarming & Reception (20 Dec · 11 AM)">
+                                    <span class="pill-btn" style="text-align: left; justify-content: flex-start;">
+                                        <span>🏡 Housewarming & Reception (20 Dec · 11 AM)</span>
+                                    </span>
+                                </label>
+                                <label class="radio-pill">
+                                    <input type="radio" name="events" value="Holy Nikah Ceremony (19 Dec · After Asr)">
+                                    <span class="pill-btn" style="text-align: left; justify-content: flex-start;">
+                                        <span>🕌 Holy Nikah Ceremony (19 Dec · After Asr)</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Message / Dua -->
+                        <div class="form-group">
+                            <label for="rsvp-message" class="form-label">Special Message / Dua <span class="optional-tag">(Optional)</span></label>
+                            <textarea id="rsvp-message" class="form-input form-textarea" placeholder="Send your greetings, blessings, or duas for the families and couples..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block rsvp-submit-btn" id="rsvpSubmitBtn">
+                            <span class="btn-text">Confirm Attendance</span>
+                            <span class="btn-spinner" hidden></span>
+                        </button>
+                    </form>
+
+                    <!-- Success State View -->
+                    <div class="rsvp-success-box" id="rsvp-success" hidden>
+                        <div class="success-icon-wrap">🌸</div>
+                        <h3 class="success-title">Jazakumullahu Khairan!</h3>
+                        <div class="success-msg-content" id="successMessageDetails">
+                            <!-- Dynamic summary injected by JS -->
+                        </div>
+                        <button type="button" class="btn btn-secondary btn-sm" id="edit-rsvp-btn">
+                            <span>Edit Your Response</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 10. FAMILY / HOSTS SECTION                 -->
+    <!-- ========================================== -->
+    <section class="section family-section reveal" id="family">
+        <div class="container">
+            <div class="family-card">
+                <div class="family-card-inner">
+                    <span class="family-eyebrow">Warm Regards</span>
+                    <h2 class="family-heading">With Love From Our Family</h2>
+                    
+                    <div class="family-divider">
+                        <span class="f-line"></span>
+                        <span class="f-crest">✦</span>
+                        <span class="f-line"></span>
+                    </div>
+
+                    <div class="hosts-list">
+                        <div class="host-row">
+                            <span class="host-name">Jabbar NV & Bathuly V</span>
+                        </div>
+                        <div class="host-row">
+                            <span class="host-name">Muhammed Jalib V & Fathima MC</span>
+                        </div>
+                        <div class="host-row">
+                            <span class="host-name">Subaida Moosa KK</span>
+                        </div>
+                    </div>
+
+                    <div class="regards-block">
+                        <span class="regards-title">With Regards</span>
+                        <strong class="regards-name">Ummerkutty Vaikkileri</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 11. FINAL CLOSING & FOOTER                 -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+            
+            <p class="footer-blessing-quote">
+                "Your presence, prayers and blessings mean the world to us."
+            </p>
+
+            <h3 class="footer-farewell">We look forward to celebrating with you.</h3>
+
+            <div class="footer-date-stamp">
+                <span>20</span> · <span>12</span> · <span>2026</span>
+            </div>
+
+            <div class="footer-divider-mini"></div>
+
+            <div class="footer-copy">
+                &copy; 2026 Family Invitation · Muhammed Jalib & Fathima · Jamshida & Midlaj
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
